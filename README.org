@@ -1,0 +1,19 @@
+* Wait a minute, why is this README written in Org-Mode?
+Because I love emacs. This vim config was made out of necessity for work.
+The goal is that this vim config will try to emulate most of my emacs workflow, hopefully.
+[[https://github.com/RamonAra209/dot_emacs][Link to emacs config]]
+* Quick-start
+#+begin_src bash
+  # Vim plug installation
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  # coc code completion 
+  curl -sL install-node.vercel.app/lts | bash  # nodejs dependency
+#+end_src
+
+Once that's all out of the way, remember to:
+1. ~:so~ within ~.vimrc~
+2. ~:PlugInstall~
+3. ~:CocInstall <language server>~
+   1. e.g. ~:CocInstall coc-pyright~ & ~:CocInstall coc-rust-analyzer~
