@@ -1,4 +1,4 @@
-* Wait a minute, why is this README written in Org-Mode?
+* Wait a minute, whys this README written in Org?
 Because I love emacs. This vim config was made out of necessity for work.
 The goal is that this vim config will try to emulate most of my emacs workflow, hopefully.
 [[https://github.com/RamonAra209/dot_emacs][Link to emacs config]]
