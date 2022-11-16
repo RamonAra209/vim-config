@@ -10,6 +10,7 @@ call plug#end()
 
 " My defined settings"
 nnoremap <Space> <Nop>
+nmap <space> <leader>
 
 "let leader = " "
 nnoremap <leader>wv :vsplit<CR>
