@@ -7,14 +7,21 @@ call plug#begin()
 	Plug 'luochen1990/rainbow'
 	Plug 'tpope/vim-fugitive'
 	Plug 'kien/ctrlp.vim'
+	Plug 'jreybert/vimagit'
+	Plug 'ervandew/supertab'
+	Plug 'voldikss/vim-floaterm'
+	Plug 'scrooloose/nerdtree'
+	Plug 'tpope/vim-commentary'
 call plug#end()
 
-" My defined settings"
-nmap <space> <leader>
+" " My defined settings"
 
+nmap <space> <leader>
 
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>, :CtrlPBuffer<CR>
+
+nnoremap <leader>gg :Magit<CR>
 
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>wn :split<CR>
@@ -24,6 +31,9 @@ nnoremap <leader>wh :wincmd h<CR>
 nnoremap <leader>wj :wincmd j<CR>
 nnoremap <leader>wk :wincmd k<CR>
 nnoremap <leader>wl :wincmd l<CR>
+
+nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <leader>tp :NERDTreeToggle<CR>
 
 set nocompatible
 set relativenumber
@@ -42,7 +52,8 @@ set ttimeoutlen=1
 set ttyfast
 
 let g:rainbow_active = 1
-
+let g:magit_default_fold_level = 2
+let g:ctrlp_show_hidden = 1
 
 "vim coc settings below"
 set encoding=utf-8
@@ -98,7 +109,7 @@ endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>lr <Plug>(coc-rename)
 
 nmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
@@ -179,3 +190,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Something here so I don't mess up the bottom
