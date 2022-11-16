@@ -17,6 +17,13 @@ nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>, :CtrlPBuffer<CR>
 
 nnoremap <leader>wv :vsplit<CR>
+nnoremap <leader>wn :split<CR>
+nnoremap <leader>wc :q<CR>
+
+nnoremap <leader>wh :wincmd h<CR>
+nnoremap <leader>wj :wincmd j<CR>
+nnoremap <leader>wk :wincmd k<CR>
+nnoremap <leader>wl :wincmd l<CR>
 
 set nocompatible
 set relativenumber
