@@ -4,12 +4,17 @@ The goal is that this vim config will try to emulate most of my emacs workflow, 
 [[https://github.com/RamonAra209/dot_emacs][Link to emacs config]]
 * Quick-start
 #+begin_src bash
+  mkdir ~/.vim
+  git clone git@github.com:RamonAra209/vim-config.git ~/.vim/
+  
   # Vim plug installation
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   # coc code completion 
   curl -sL install-node.vercel.app/lts | bash  # nodejs dependency
+
+  export VIMINIT="source ~/.vim/.vimrc"
 #+end_src
 
 Once that's all out of the way, remember to:
