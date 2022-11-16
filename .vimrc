@@ -6,13 +6,16 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'luochen1990/rainbow'
 	Plug 'tpope/vim-fugitive'
+	Plug 'kien/ctrlp.vim'
 call plug#end()
 
 " My defined settings"
-nnoremap <Space> <Nop>
 nmap <space> <leader>
 
-"let leader = " "
+
+nnoremap <leader>ff :CtrlP<CR>
+nnoremap <leader>, :CtrlPBuffer<CR>
+
 nnoremap <leader>wv :vsplit<CR>
 
 set nocompatible
