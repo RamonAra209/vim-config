@@ -3,6 +3,9 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'joshdick/onedark.vim'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'vim-airline/vim-airline'
+	Plug 'luochen1990/rainbow'
+	Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " My defined settings"
@@ -26,6 +29,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
+
+let g:rainbow_active = 1
 
 
 "vim coc settings below"
