@@ -7,11 +7,9 @@ The goal is that this vim config will try to emulate most of my emacs workflow, 
   git clone git@github.com:RamonAra209/vim-config.git ~/.vim/
   mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
   
-  # Vim plug installation
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  # coc code completion 
+     
   curl -sL install-node.vercel.app/lts | bash  # nodejs dependency
 
   export VIMINIT="source ~/.vim/.vimrc"
