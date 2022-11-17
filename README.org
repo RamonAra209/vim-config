@@ -12,7 +12,7 @@ The goal is that this vim config will try to emulate most of my emacs workflow, 
      
   curl -sL install-node.vercel.app/lts | bash
 
-  export VIMINIT="source ~/.vim/.vimrc"
+  echo 'export VIMINIT="source ~/.vim/.vimrc"' >> ~/.bashrc
 #+end_src
 
 Once that's all out of the way, remember to:
