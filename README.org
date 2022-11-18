@@ -11,6 +11,10 @@ The goal is that this vim config will try to emulate most of my emacs workflow, 
      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
      
   curl -sL install-node.vercel.app/lts | bash
+  
+  # TODO needs node install section with curl: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+  
+  nvm install 14.14.0
 
   echo 'export VIMINIT="source ~/.vim/.vimrc"' >> ~/.bashrc
 #+end_src
