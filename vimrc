@@ -1,27 +1,30 @@
 "remember to add to PATH: export VIMINIT="source ~/.vim/.vimrc"
 call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'joshdick/onedark.vim'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'vim-airline/vim-airline'
-	Plug 'luochen1990/rainbow'
-	Plug 'tpope/vim-fugitive'
+	Plug 'sainnhe/sonokai'
 	Plug 'kien/ctrlp.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
 	Plug 'jreybert/vimagit'
+	Plug 'luochen1990/rainbow'
 	Plug 'ervandew/supertab'
-	Plug 'voldikss/vim-floaterm'
+	Plug 'voldikss/vim-floaterm'            "C-\ C-n to enter normal mode 
 	Plug 'scrooloose/nerdtree'
 	Plug 'tpope/vim-commentary'
 call plug#end()
 
-" " My defined settings"
-
+" My defined settings"
 nmap <space> <leader>
 
 nnoremap <leader>ff :CtrlP<CR>
+nnoremap <leader>. :CtrlP<CR>
 nnoremap <leader>, :CtrlPBuffer<CR>
 
 nnoremap <leader>gg :Magit<CR>
+nnoremap <leader>ga :Git status<CR>
+nnoremap <leader>gs :Git status<CR>
+nnoremap <leader>gl :Git log<CR>
 
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>wn :split<CR>
@@ -35,13 +38,17 @@ nnoremap <leader>wl :wincmd l<CR>
 nnoremap <leader>tt :FloatermToggle<CR>
 nnoremap <leader>tp :NERDTreeToggle<CR>
 
+syntax on
 set nocompatible
 set relativenumber
-set wrap!               "no code wrapping"
-syntax on
+set wrap!               
+set timeoutlen=500
+set cursorline
 
-colorscheme onedark
-hi CursorLineNr guifg=#e0944c
+colorscheme sonokai
+hi LineNr ctermfg=grey 
+hi CursorLineNr ctermfg=red cterm=bold
+hi clear Comment
 
 "Cursor differentiation between normal/insert mode" 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
