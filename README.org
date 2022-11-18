@@ -4,6 +4,20 @@ The goal is that this vim config will try to emulate most of my emacs workflow, 
 [[https://github.com/RamonAra209/dot_emacs][Link to emacs config]]
 * Quick-start
 #+begin_src bash
+  # Building vim from source without root privledges
+  cd && git clone https://github.com/vim/vim
+  cd vim
+  
+  ./configure --prefix=$HOME/.local --with-features=huge --enable-rubyinterp --enable-python3interp=dynamic --with-python3-config-dir=$HOME/.local/lib/python3.7/config-3.7m-x86_64-linux-gnu/ --enable-luainterp
+  make -j40 install
+  
+  alias vim="$HOME/.local/bin/vim"
+  echo "alias vim='$HOME/.local/bin/vim'" >> ~/.bash_aliases
+  echo "source $HOME/.bash_aliases" >> ~/.profile
+  source ~/.profile
+  vim --version # Make sure it says version >= 9
+
+  # Getting my configuration files
   git clone -b LLNL-config git@github.com:RamonAra209/vim-config.git ~/.vim/
   mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
   
