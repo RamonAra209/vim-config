@@ -26,17 +26,18 @@ nnoremap <leader>ga :Git status<CR>
 nnoremap <leader>gs :Git status<CR>
 nnoremap <leader>gl :Git log<CR>
 
+nmap <leader>lr <Plug>(coc-ename)
+
+nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <leader>tp :NERDTreeToggle<CR>
+
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>wn :split<CR>
 nnoremap <leader>wc :q<CR>
-
 nnoremap <leader>wh :wincmd h<CR>
 nnoremap <leader>wj :wincmd j<CR>
 nnoremap <leader>wk :wincmd k<CR>
 nnoremap <leader>wl :wincmd l<CR>
-
-nnoremap <leader>tt :FloatermToggle<CR>
-nnoremap <leader>tp :NERDTreeToggle<CR>
 
 syntax on
 set nocompatible
@@ -116,10 +117,9 @@ endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-nmap <leader>lr <Plug>(coc-rename)
 
-nmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected) FIXME
+" nmap <leader>f  <Plug>(coc-format-selected) FIXME
 
 augroup mygroup
   autocmd!
